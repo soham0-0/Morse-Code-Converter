@@ -29,6 +29,10 @@ int main(int argc, char **argv){
      H   V F    L     P   J  B   X C   Y  Z   Q
 
 */
+    if(argc<2){
+        cout<<"Too few arguments!\n";
+        exit(0);
+    }
     map<string, vector<string>> morseTree = {{"ROOT", {"E", "T"}}, {"E", {"I", "A"}}, {"T", {"N", "M"}}, {"I", {"S", "U"}}, {"A", {"R", "W"}}, {"N", {"D", "K"}}, {"M", {"G", "O"}}, {"S", {"H", "V"}}, {"U", {"F", "NIL"}}, {"R", {"L", "NIL"}}, {"W", {"P", "J"}}, {"D", {"B", "X"}}, {"K", {"C", "Y"}}, {"G", {"Z", "Q"}}};  
     string input = argv[1];
     string output = "", cur = "ROOT";
