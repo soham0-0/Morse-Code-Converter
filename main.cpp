@@ -8,7 +8,7 @@ enum child{
     right
 };
 
-int main(){
+int main(int argc, char **argv){
 /*
               Tree to find decoded output:
 
@@ -30,8 +30,7 @@ int main(){
 
 */
     map<string, vector<string>> morseTree = {{"ROOT", {"E", "T"}}, {"E", {"I", "A"}}, {"T", {"N", "M"}}, {"I", {"S", "U"}}, {"A", {"R", "W"}}, {"N", {"D", "K"}}, {"M", {"G", "O"}}, {"S", {"H", "V"}}, {"U", {"F", "NIL"}}, {"R", {"L", "NIL"}}, {"W", {"P", "J"}}, {"D", {"B", "X"}}, {"K", {"C", "Y"}}, {"G", {"Z", "Q"}}};  
-    cout<<"Enter Encoded Text (1 space to seperate letters and 2 spaces to seperate words): ";
-    string input; getline(cin, input);
+    string input = argv[1];
     string output = "", cur = "ROOT";
     int spcount = 0;
     for(auto C: input){
