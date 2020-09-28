@@ -3,11 +3,14 @@ _Simple morse decoder using binary tree._
 
 ***
 Implemented 4 levels of the following tree.
-![](images/Morse_code_tree.png)
+![Morse code tree](images/Morse_code_tree.png)
+
+## Input Format:
+Use one space to seperate letters and two spaces to seperate words.
 
 ## Build:
 1. ```git clone https://github.com/soham0-0/Morse-Code-Decoder.git```
 2. ```cd Morse-Code-Decoder/```
-3. ```g++ main.cpp```
+3. ```make all```
 
 ### _Encoder coming soon!_
