@@ -6,7 +6,8 @@ Implemented 4 levels of the following tree.
 ![Morse code tree](images/Morse_code_tree.png)
 
 ## Input Format:
-Use one space to seperate letters and two spaces to seperate words.
+- Use one space to seperate letters and two spaces to seperate words.
+- Put the input string inside quotation marks eg. ```"-.- --- -. .. -.-. .... .. .-- .-"```.
 
 ## Build:
 1. ```git clone https://github.com/soham0-0/Morse-Code-Decoder.git```
