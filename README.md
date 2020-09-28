@@ -9,3 +9,5 @@ Implemented 4 levels of the following tree.
 1. ```git clone https://github.com/soham0-0/Morse-Code-Decoder.git```
 2. ```cd Morse-Code-Decoder/```
 3. ```g++ main.cpp```
+
+### _Encoder coming soon!_
