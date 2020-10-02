@@ -17,27 +17,22 @@ const string DECODE_COMMAND = "decode";
 const string HELP_COMMAND = "--help";
 
 void decode(string input) {
-	/*
-				  Tree to find decoded output:
-
-							  ROOT
-						/              \
-	   (left if . )    /                \   (right if - )
-					  /                  \
-					 /                    \
-					/                      \
-				   E                        T
-				 /   \                  /       \
-				/     \                /         \
-			   /       \              /           \
-			  I          A           N             M
-			/   \      /   \        /  \         /   \
-		   S     U    R     W      D     K      G     O
-		  / \   /    /     / \    / \   / \    / \
-		 H   V F    L     P   J  B   X C   Y  Z   Q
-
-	*/
-	map<string, vector<string>> morseTree = { {"ROOT", {"E", "T"}}, {"E", {"I", "A"}}, {"T", {"N", "M"}}, {"I", {"S", "U"}}, {"A", {"R", "W"}}, {"N", {"D", "K"}}, {"M", {"G", "O"}}, {"S", {"H", "V"}}, {"U", {"F", "NIL"}}, {"R", {"L", "NIL"}}, {"W", {"P", "J"}}, {"D", {"B", "X"}}, {"K", {"C", "Y"}}, {"G", {"Z", "Q"}} };
+	map<string, vector<string>> morseTree = { 
+        {"ROOT", {"E", "T"}}, 
+        {"E", {"I", "A"}}, 
+        {"T", {"N", "M"}}, 
+        {"I", {"S", "U"}}, 
+        {"A", {"R", "W"}}, 
+        {"N", {"D", "K"}}, 
+        {"M", {"G", "O"}}, 
+        {"S", {"H", "V"}}, 
+        {"U", {"F", "NIL"}}, 
+        {"R", {"L", "NIL"}}, 
+        {"W", {"P", "J"}}, 
+        {"D", {"B", "X"}}, 
+        {"K", {"C", "Y"}}, 
+        {"G", {"Z", "Q"}} 
+    };
 	string output = "", cur = "ROOT";
 	int spcount = 0;
 	for (auto C : input) {
@@ -131,7 +126,6 @@ int main(int argc, char** argv) {
 				funcMap[operation](input);
 			}
 		}
-
 		else if (operation == HELP_COMMAND) printHelp();
 		else cout << "Operation not identified! Use --help for more information" << endl;
 	}
